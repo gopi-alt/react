@@ -1,0 +1,51 @@
+.portfolio-section {
+  background: linear-gradient(
+    135deg,
+    #e9ecef,
+    #f8f9fa
+  ); /* Light gradient background */
+  padding: 50px 20px; /* Add padding */
+  color: #333; /* Text color */
+}
+
+.portfolio-container {
+  max-width: 1200px; /* Limit max width for better readability */
+  margin: 0 auto; /* Center the container */
+  text-align: center; /* Center text */
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center; /* Center items */
+  gap: 20px; /* Spacing between items */
+}
+
+.portfolio-item {
+  background: white; /* Background for each item */
+  border: 1px solid #ddd; /* Light border for definition */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Internal padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Transition for hover effect */
+  width: 300px; /* Fixed width for portfolio items */
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.project-link {
+  display: inline-block; /* Block display for padding */
+  margin-top: 10px; /* Spacing above link */
+  padding: 10px 15px; /* Internal padding */
+  background-color: #007bff; /* Button background */
+  color: white; /* Button text color */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.project-link:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

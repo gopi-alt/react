@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif; /* Set a default font */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Skills Section Styles */
+.skills-section {
+  background: linear-gradient(
+    135deg,
+    #920c9e,
+    #2575fc
+  ); /* Gradient background */
+  padding: 50px 20px; /* Padding for top and bottom */
+  text-align: center; /* Center the text */
+  position: relative; /* Position relative for scroll animations */
+  overflow: hidden; /* Hide overflow for clean transitions */
+  color: white;
+  background: linear-gradient(135deg, #a00f99, #2575fc);
+  /* White text for contrast */
+}
+
+/* Skills Heading */
+.skills-section h2 {
+  font-size: 2.5rem; /* Larger font size for the heading */
+  margin-bottom: 30px; /* Space below the heading */
+  color: #160902; /* White text for heading */
+  animation: fadeIn 2s ease-in; /* Fade-in animation */
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center items */
+}
+
+/* Skill Item Styles */
+.skill {
+  width: 100%; /* Full width */
+  max-width: 600px; /* Max width for larger screens */
+  margin: 15px 0; /* Margin between skill items */
+  background: rgba(138, 17, 17, 0.2); /* Semi-transparent white background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  overflow: hidden; /* Prevent overflow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transform and shadow on hover */
+}
+
+/* Skill Hover Effect */
+.skill:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+/* Skill Name Styles */
+.skill-name {
+  display: flex; /* Flexbox for name and level */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  padding: 15px; /* Padding around skill name */
+  font-weight: bold; /* Bold font for skill name */
+  color: #fff; /* White text for skill name */
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  background-color: #13acc0; /* Light gray for the background */
+  border-radius: 4px; /* Rounded corners */
+  height: 20px; /* Height of the progress bar */
+  overflow: hidden; /* Prevent overflow */
+  margin-bottom: 10px; /* Space below the progress bar */
+  position: relative; /* For tooltip positioning */
+}
+
+/* Progress Fill Styles */
+.progress {
+  height: 100%; /* Full height */
+  background-color: #15d860; /* White color for the progress fill */
+  width: 0; /* Start with width 0 for animation */
+  transition: width 1s ease; /* Smooth width transition */
+}
+
+/* Tooltip Styles */
+.tooltip {
+  position: absolute; /* Position relative to the progress bar */
+  bottom: 100%; /* Position above the bar */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center tooltip */
+  background-color: rgba(0, 0, 0, 0.75); /* Dark background for tooltip */
+  color: #fff; /* White text for contrast */
+  padding: 5px 10px; /* Padding for tooltip */
+  border-radius: 4px; /* Rounded corners for tooltip */
+  white-space: nowrap; /* Prevent text wrapping */
+  opacity: 0; /* Start as hidden */
+  transition: opacity 0.2s ease; /* Fade in effect */
+}
+
+/* Show tooltip on hover */
+.progress-bar:hover .tooltip {
+  opacity: 1; /* Show tooltip on hover */
+  transform: translate(-50%, -120%); /* Move tooltip above the progress bar */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start fully transparent */
+  }
+  to {
+    opacity: 1; /* End fully opaque */
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 30px 10px; /* Reduce padding on smaller screens */
+  }
+
+  .skills-section h2 {
+    font-size: 2rem; /* Smaller font size for the heading */
+  }
+
+  .skill {
+    max-width: 100%; /* Full width on small screens */
+  }
+}

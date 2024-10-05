@@ -1,0 +1,70 @@
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh; /* Full height for a hero section */
+  background: linear-gradient(
+    135deg,
+    #640d5f,
+    #d91656
+  ); /* Gradient background */
+  color: white; /* Text color */
+  text-align: center; /* Centered text */
+  padding: 0 20px; /* Padding for smaller screens */
+  position: relative; /* Position for the pseudo-element */
+}
+
+.intro-container {
+  z-index: 2; /* Bring content above background */
+}
+
+.intro-description {
+  font-size: 1.2rem; /* Larger text for description */
+  line-height: 1.6; /* Improve readability */
+  margin: 20px 0; /* Spacing around description */
+  filter: drop-shadow(
+    2px 2px 5px rgba(0, 0, 0, 0.4)
+  ); /* Text shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transform for hover */
+}
+
+.intro-description:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.topics-list {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center items */
+}
+
+.topics-list li {
+  font-size: 1.1rem; /* Slightly larger text */
+  margin: 10px 0; /* Spacing between items */
+  padding: 10px 20px; /* Padding around items */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.topics-list li:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Adding a pseudo-element for decoration */
+.intro-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("C:\Users\DELL\Downloads\portfolio\src\assets\b1.jpg"); /* Optional background image */
+  opacity: 0.1; /* Slightly transparent */
+  z-index: 1; /* Behind the text */
+}
